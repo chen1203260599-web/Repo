@@ -1,3 +1,19 @@
+Package: com.bvn.airaw-zh
+Version: 1.7.1k+zh7
+Architecture: iphoneos-arm64e
+Name: Airaw 简体中文补丁（含分屏）
+Depends: mobilesubstrate, preferenceloader, firmware (>=14.0), com.bvn.airaw-r2 (>=1.7.0)
+Pre-Depends: rootless-compat(>= 0.9)
+Replaces: com.bvn.airaw-r2 (= 1.7.1k)
+Description: AIRAW及分屏插件汉化
+Maintainer: Community Localization <local@local>
+Author: Community Localization
+Section: Tweaks
+Filename: debs/Airaw-1.7.1k-zh-HanHua-v7.deb
+Size: 13956
+MD5sum: 3dcb7befac611571a5d04a6aaf6dd8c6
+SHA256: 8f725313c9e221649d3803613b07cd3a5c489b092fc6c7d6a3d651fb7950ac66
+
 Package: jp.dcsyhi.airaw.universalpatch
 Version: 1.0.0
 Architecture: iphoneos-arm
