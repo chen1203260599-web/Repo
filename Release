@@ -1,8 +1,8 @@
-Origin: Airaw Repo
-Label: Airaw Repo
+Origin: 阿晨源
+Label: 阿晨源
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
-Description: Airaw tweak repository (UniversalViewPatch / AirawDisplayEnhancer)
+Description: 阿晨源 - Airaw 系列插件越狱源
