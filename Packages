@@ -1,0 +1,45 @@
+Package: jp.dcsyhi.airaw.universalpatch
+Version: 1.0.0
+Architecture: iphoneos-arm
+Name: Universal View Patch
+Depends: ellekit | mobilesubstrate, firmware (>= 16.0)
+Description: 通用视图修补插件：按配置匹配任意 App 中的视图类名，强制其尺寸对齐宿主窗口（CarPlay 分屏等场景）。由 Airaw Yahoo Map Patch 泛化而来。
+Maintainer: Your Name <you@example.com>
+Author: Your Name <you@example.com>
+Section: Tweaks
+Tag: compatible_min::ios16.0
+Installed-Size: 172
+Filename: debs/jp.dcsyhi.airaw.universalpatch_1.0.0_iphoneos-arm.deb
+Size: 18452
+MD5sum: 9c59b248208effef6761e3ceb6133ea5
+SHA256: 9be65ec83d109bab7fdfbe39849d7923156d63ac1d52a77bdbe3bccf1f53a2d7
+
+Package: com.airaw.displayenhancer
+Version: 0.4.0-rc
+Architecture: iphoneos-arm64e
+Name: Airaw Display Enhancer
+Depends: ellekit | mobilesubstrate, firmware (>=16.0)
+Maintainer: Airaw
+Author: Airaw
+Section: Tweaks
+Tag: compatible_min::ios16.0
+Installed-Size: 336
+Filename: debs/com.airaw.displayenhancer_0.4.0-rc_iphoneos-arm64e.deb
+Size: 18384
+MD5sum: 5a18a3d94d06f5d8a9878fe570446f36
+SHA256: ea3213216b7cf660c2ebbb039ebea5da07a6316ab0a2722639fe68ea0bc89422
+
+Package: com.airaw.displayenhancer
+Version: 0.4.0-rc
+Architecture: iphoneos-arm64
+Name: Airaw Display Enhancer
+Depends: ellekit | mobilesubstrate, firmware (>=16.0)
+Maintainer: Airaw
+Author: Airaw
+Section: Tweaks
+Tag: compatible_min::ios16.0
+Installed-Size: 336
+Filename: debs/com.airaw.displayenhancer_0.4.0-rc_iphoneos-arm64.deb
+Size: 18438
+MD5sum: 238477b418f0448269599e8da7c508db
+SHA256: f794febed4ce0a4788b8f69ad3885eb6afa8453e1ff816ef862378d96e49de3e
