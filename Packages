@@ -35,27 +35,33 @@ Version: 0.4.0-rc
 Architecture: iphoneos-arm64e
 Name: Airaw Display Enhancer
 Depends: ellekit | mobilesubstrate, firmware (>=16.0)
+Description: CarPlay 显示增强与布局修复插件。支持按 App 单独配置显示模式与画面比例、
+全屏与分屏布局、金属渲染（Metal）修复、网页视图（WebView）修复及缩放调节，
+安装后可在设置 App 中配置，于 CarPlay 界面生效。
 Maintainer: Airaw
 Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
 Installed-Size: 336
 Filename: debs/com.airaw.displayenhancer_0.4.0-rc_iphoneos-arm64e.deb
-Size: 18396
-MD5sum: e32cac3a3afb62de954331bfeae38f51
-SHA256: f1bc653f27e722df4cc4054dc4ee5beae6f6dafe58225d7a0c3f81afd6ba89ea
+Size: 18660
+MD5sum: 22a7b428b1220f09a337c3fd2783731b
+SHA256: c706914d8efb370fde595722a32ec3b428f7c138abfabd83dbfc72102e0fb71a
 
 Package: com.airaw.displayenhancer
 Version: 0.4.0-rc
 Architecture: iphoneos-arm64
 Name: Airaw Display Enhancer
 Depends: ellekit | mobilesubstrate, firmware (>=16.0)
+Description: CarPlay 显示增强与布局修复插件。支持按 App 单独配置显示模式与画面比例、
+全屏与分屏布局、金属渲染（Metal）修复、网页视图（WebView）修复及缩放调节，
+安装后可在设置 App 中配置，于 CarPlay 界面生效。
 Maintainer: Airaw
 Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
 Installed-Size: 336
 Filename: debs/com.airaw.displayenhancer_0.4.0-rc_iphoneos-arm64.deb
-Size: 18452
-MD5sum: 073b951ab497964c08d540778c27830c
-SHA256: 1540a1c4cfb644b02432b183fe1a9314634699471284261745293eb24bc827b5
+Size: 18714
+MD5sum: bc4cb4f19087040b385f61f74f55fcd5
+SHA256: 531c0ccf7693af7a56a69fe8f9c9210075966f2609347a25b41bb4d5ace1d101
