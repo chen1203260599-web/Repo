@@ -31,7 +31,7 @@ MD5sum: 9c59b248208effef6761e3ceb6133ea5
 SHA256: 9be65ec83d109bab7fdfbe39849d7923156d63ac1d52a77bdbe3bccf1f53a2d7
 
 Package: com.airaw.displayenhancer
-Version: 1.0.2
+Version: 1.0.3
 Architecture: iphoneos-arm64
 Name: CarPlay画面自适应
 Depends: ellekit | mobilesubstrate, firmware (>=16.0)
@@ -44,13 +44,13 @@ Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
 Installed-Size: 372
-Filename: debs/com.airaw.displayenhancer_1.0.2_iphoneos-arm64.deb
-Size: 33154
-MD5sum: 96e2370b94e95f04ac4430b0c877a344
-SHA256: a4d450f38fbec96beb73dd6293b929b2272a7fe246e6f944fbaee4736f336ec1
+Filename: debs/com.airaw.displayenhancer_1.0.3_iphoneos-arm64.deb
+Size: 33216
+MD5sum: d8b6928f1f884b6d8550a9d482db6bdb
+SHA256: 41021488ba192589ee78e5ed3d537e3424bd585b35bef70f960608deb8d27e4d
 
 Package: com.airaw.displayenhancer
-Version: 1.0.2
+Version: 1.0.3
 Architecture: iphoneos-arm64e
 Name: CarPlay画面自适应
 Depends: ellekit | mobilesubstrate, firmware (>=16.0)
@@ -63,7 +63,7 @@ Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
 Installed-Size: 372
-Filename: debs/com.airaw.displayenhancer_1.0.2_iphoneos-arm64e.deb
-Size: 33144
-MD5sum: 0bd1791856083a0e7941b39635cb3209
-SHA256: 3896323f3bcb5aa71da997a385b4db396fe7ab9b0a8441b528a992202e8fc6ed
+Filename: debs/com.airaw.displayenhancer_1.0.3_iphoneos-arm64e.deb
+Size: 33152
+MD5sum: da4b27d1bb66ac87fa69f2e527b53520
+SHA256: a7cd0aeff734cf735a547e26bcd74b50c5aa538f8dfa4976361874b26c84209c
