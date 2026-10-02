@@ -45,9 +45,9 @@ Section: Tweaks
 Tag: compatible_min::ios16.0
 Installed-Size: 340
 Filename: debs/com.airaw.displayenhancer_1.0_iphoneos-arm64.deb
-Size: 26908
-MD5sum: 4402f8951836aeaf0d4efc7e5c3479fa
-SHA256: 2d5585e989c6a5b61f5b123978103e7d75f7f2e790d661d780440931b29e613a
+Size: 26948
+MD5sum: 0c9c4523de009f1319a36b5be01ab354
+SHA256: 742a6613a8ce16d9a73607b3a3cea84c87aa687a480bcba77d39f50773c6476e
 
 Package: com.airaw.displayenhancer
 Version: 1.0
@@ -64,6 +64,6 @@ Section: Tweaks
 Tag: compatible_min::ios16.0
 Installed-Size: 340
 Filename: debs/com.airaw.displayenhancer_1.0_iphoneos-arm64e.deb
-Size: 26848
-MD5sum: a30f0be123f8330994383800498fa3f8
-SHA256: 3bffb2c9dfa34f6bcab5e689fa0f0539e7d87162c5a0c2a50ba5635926b0e916
+Size: 26910
+MD5sum: 6254051bf74c1c44ab841dcd037ce3d3
+SHA256: 60550fac6d2730befd5f92579469bae688b366ad0d46d81636cce3099061f523
