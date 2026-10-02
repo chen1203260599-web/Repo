@@ -1,3 +1,22 @@
+Package: com.airaw.displayenhancer
+Version: 1.0
+Architecture: iphoneos-arm64e
+Name: CarPlay画面自适应
+Depends: ellekit | mobilesubstrate, firmware (>=16.0)
+Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。
+支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式
+（自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与
+缩放比例，保存后即时热重载。
+Maintainer: Airaw
+Author: Airaw
+Section: Tweaks
+Tag: compatible_min::ios16.0
+Installed-Size: 340
+Filename: debs/com.airaw.displayenhancer_1.0_iphoneos-arm64e.deb
+Size: 26120
+MD5sum: 67f6b23b3b04f9ea9add26e826717648
+SHA256: b54849247e3186b3e928ec7364bacb4966783ad699c7a038e775d231d030d920
+
 Package: com.bvn.airaw-zh
 Version: 1.7.1k+zh7
 Architecture: iphoneos-arm64e
@@ -31,37 +50,20 @@ MD5sum: 9c59b248208effef6761e3ceb6133ea5
 SHA256: 9be65ec83d109bab7fdfbe39849d7923156d63ac1d52a77bdbe3bccf1f53a2d7
 
 Package: com.airaw.displayenhancer
-Version: 0.4.0-rc
-Architecture: iphoneos-arm64e
-Name: Airaw Display Enhancer
-Depends: ellekit | mobilesubstrate, firmware (>=16.0)
-Description: CarPlay 显示增强与布局修复插件。支持按 App 单独配置显示模式与画面比例、
-全屏与分屏布局、金属渲染（Metal）修复、网页视图（WebView）修复及缩放调节，
-安装后可在设置 App 中配置，于 CarPlay 界面生效。
-Maintainer: Airaw
-Author: Airaw
-Section: Tweaks
-Tag: compatible_min::ios16.0
-Installed-Size: 336
-Filename: debs/com.airaw.displayenhancer_0.4.0-rc_iphoneos-arm64e.deb
-Size: 18660
-MD5sum: 22a7b428b1220f09a337c3fd2783731b
-SHA256: c706914d8efb370fde595722a32ec3b428f7c138abfabd83dbfc72102e0fb71a
-
-Package: com.airaw.displayenhancer
-Version: 0.4.0-rc
+Version: 1.0
 Architecture: iphoneos-arm64
-Name: Airaw Display Enhancer
+Name: CarPlay画面自适应
 Depends: ellekit | mobilesubstrate, firmware (>=16.0)
-Description: CarPlay 显示增强与布局修复插件。支持按 App 单独配置显示模式与画面比例、
-全屏与分屏布局、金属渲染（Metal）修复、网页视图（WebView）修复及缩放调节，
-安装后可在设置 App 中配置，于 CarPlay 界面生效。
+Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。
+支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式
+（自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与
+缩放比例，保存后即时热重载。
 Maintainer: Airaw
 Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
-Installed-Size: 336
-Filename: debs/com.airaw.displayenhancer_0.4.0-rc_iphoneos-arm64.deb
-Size: 18714
-MD5sum: bc4cb4f19087040b385f61f74f55fcd5
-SHA256: 531c0ccf7693af7a56a69fe8f9c9210075966f2609347a25b41bb4d5ace1d101
+Installed-Size: 340
+Filename: debs/com.airaw.displayenhancer_1.0_iphoneos-arm64.deb
+Size: 26176
+MD5sum: a343330ab36d6a9e3a7c823471ae0699
+SHA256: f6985e0a151dfe17a7e72fae3d58577b1bcd625aae44a3210df92278585dee60
