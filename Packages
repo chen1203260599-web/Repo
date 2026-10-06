@@ -63,11 +63,27 @@ Depends: mobilesubstrate (>= 0.9.5000) | ellekit, firmware (>= 14.0), preference
 Conflicts: com.sensetechlab.duodash
 Architecture: iphoneos-arm64
 Version: 0.2.0
-Installed-Size: 372
+Installed-Size: 164
 Filename: debs/com.userspace.carsplit_0.2.0_iphoneos-arm64.deb
-Size: 19624
-MD5sum: 59c25482572a4e01cdeb450ebaae3c11
-SHA256: 2824a207a5c1faa6ec32b89e8b5f33fb9536d6ffffa94f4393e63557bff79865
+Size: 14118
+MD5sum: b5c5a89bafd7a9387d57a5a66bb28a53
+SHA256: 21ee0a9ac14296f89e4748c2a10140a9b6c584010cb725448d61bbad920bd680
+
+Package: com.userspace.carsplit
+Name: CarSplit
+Description: CarPlay 双应用方案（原创实现）。让任意 App 出现在车机应用选择器；CarPlay 连接后自动启动你选好的两个 App；v0.2 新增手机屏分屏预览容器（双面板 + 可拖拽分隔条），无需车机即可测试；实时画面桥接规划在 v0.3。
+Maintainer: CarSplit Contributors
+Author: CarSplit Contributors
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000) | ellekit, firmware (>= 14.0), preferenceloader
+Conflicts: com.sensetechlab.duodash
+Architecture: iphoneos-arm64e
+Version: 0.2.0
+Installed-Size: 164
+Filename: debs/com.userspace.carsplit_0.2.0_iphoneos-arm64e.deb
+Size: 14120
+MD5sum: 9e96fb60e5433d1414c3d855798960b3
+SHA256: 6a5a3874fab95241052d986115cf73bede1db6e3edec16ca77aac9aefeb180e5
 
 Package: jp.dcsyhi.airaw.universalpatch
 Name: Universal View Patch
