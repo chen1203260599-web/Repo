@@ -1,48 +1,16 @@
-Package: com.bvn.airaw-zh
-Version: 1.7.1k+zh7
-Architecture: iphoneos-arm64e
-Name: Airaw 简体中文补丁（含分屏）
-Depends: mobilesubstrate, preferenceloader, firmware (>=14.0), com.bvn.airaw-r2 (>=1.7.0)
-Pre-Depends: rootless-compat(>= 0.9)
-Replaces: com.bvn.airaw-r2 (= 1.7.1k)
-Description: AIRAW及分屏插件汉化
-Maintainer: Community Localization <local@local>
-Author: Community Localization
-Section: Tweaks
-Filename: debs/Airaw-1.7.1k-zh-HanHua-v7.deb
-Size: 13956
-MD5sum: 3dcb7befac611571a5d04a6aaf6dd8c6
-SHA256: 8f725313c9e221649d3803613b07cd3a5c489b092fc6c7d6a3d651fb7950ac66
-
-Package: jp.dcsyhi.airaw.universalpatch
-Version: 1.0.0
-Architecture: iphoneos-arm
-Name: Universal View Patch
-Depends: ellekit | mobilesubstrate, firmware (>= 16.0)
-Description: 通用视图修补插件：按配置匹配任意 App 中的视图类名，强制其尺寸对齐宿主窗口（CarPlay 分屏等场景）。由 Airaw Yahoo Map Patch 泛化而来。
-Maintainer: Your Name <you@example.com>
-Author: Your Name <you@example.com>
-Section: Tweaks
-Tag: compatible_min::ios16.0
-Installed-Size: 172
-Filename: debs/jp.dcsyhi.airaw.universalpatch_1.0.0_iphoneos-arm.deb
-Size: 18452
-MD5sum: 9c59b248208effef6761e3ceb6133ea5
-SHA256: 9be65ec83d109bab7fdfbe39849d7923156d63ac1d52a77bdbe3bccf1f53a2d7
-
 Package: com.airaw.displayenhancer
-Version: 1.0.6
-Architecture: iphoneos-arm64
 Name: CarPlay画面自适应
 Depends: ellekit | mobilesubstrate, firmware (>=16.0)
-Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。
-支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式
-（自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与
-缩放比例，保存后即时热重载。
 Maintainer: Airaw
 Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
+Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。
+  支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式
+  （自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与
+  缩放比例，保存后即时热重载。
+Architecture: iphoneos-arm64
+Version: 1.0.6
 Installed-Size: 372
 Filename: debs/com.airaw.displayenhancer_1.0.6_iphoneos-arm64.deb
 Size: 35058
@@ -50,20 +18,70 @@ MD5sum: 5d8cc5d11a74af656fcb9ed19195f2c2
 SHA256: b291fb872da9a66b0f3cf8dea046b35762af8dc03f510e6c3f2085dec6c7ff1d
 
 Package: com.airaw.displayenhancer
-Version: 1.0.6
-Architecture: iphoneos-arm64e
 Name: CarPlay画面自适应
 Depends: ellekit | mobilesubstrate, firmware (>=16.0)
-Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。
-支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式
-（自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与
-缩放比例，保存后即时热重载。
 Maintainer: Airaw
 Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
+Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。
+  支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式
+  （自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与
+  缩放比例，保存后即时热重载。
+Architecture: iphoneos-arm64e
+Version: 1.0.6
 Installed-Size: 372
 Filename: debs/com.airaw.displayenhancer_1.0.6_iphoneos-arm64e.deb
 Size: 35338
 MD5sum: 1ce65c890bf83fc328be371c49655b51
 SHA256: 1e585c9556de25db5a5797fa15b2378863c2c932440dd8407e3a6dc09fa6532e
+
+Package: com.bvn.airaw-zh
+Name: Airaw 简体中文补丁（含分屏）
+Version: 1.7.1k+zh7
+Architecture: iphoneos-arm64e
+Section: Tweaks
+Maintainer: Community Localization <local@local>
+Author: Community Localization
+Depends: mobilesubstrate, preferenceloader, firmware (>=14.0), com.bvn.airaw-r2 (>=1.7.0)
+Pre-Depends: rootless-compat(>= 0.9)
+Replaces: com.bvn.airaw-r2 (= 1.7.1k)
+Description: AIRAW及分屏插件汉化
+Installed-Size: 35
+Filename: debs/Airaw-1.7.1k-zh-HanHua-v7.deb
+Size: 13956
+MD5sum: 3dcb7befac611571a5d04a6aaf6dd8c6
+SHA256: 8f725313c9e221649d3803613b07cd3a5c489b092fc6c7d6a3d651fb7950ac66
+
+Package: com.userspace.carsplit
+Name: CarSplit
+Description: CarPlay 双应用方案（原创实现）。让任意 App 出现在车机应用选择器；CarPlay 连接后自动启动你选好的两个 App；v0.2 新增手机屏分屏预览容器（双面板 + 可拖拽分隔条），无需车机即可测试；实时画面桥接规划在 v0.3。
+Maintainer: CarSplit Contributors
+Author: CarSplit Contributors
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000) | ellekit, firmware (>= 14.0), preferenceloader
+Conflicts: com.sensetechlab.duodash
+Architecture: iphoneos-arm64
+Version: 0.2.0
+Installed-Size: 372
+Filename: debs/com.userspace.carsplit_0.2.0_iphoneos-arm64.deb
+Size: 19624
+MD5sum: 59c25482572a4e01cdeb450ebaae3c11
+SHA256: 2824a207a5c1faa6ec32b89e8b5f33fb9536d6ffffa94f4393e63557bff79865
+
+Package: jp.dcsyhi.airaw.universalpatch
+Name: Universal View Patch
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: 通用视图修补插件：按配置匹配任意 App 中的视图类名，强制其尺寸对齐宿主窗口（CarPlay 分屏等场景）。由 Airaw Yahoo Map Patch 泛化而来。
+Maintainer: Your Name <you@example.com>
+Author: Your Name <you@example.com>
+Section: Tweaks
+Depends: ellekit | mobilesubstrate, firmware (>= 16.0)
+Tag: compatible_min::ios16.0
+Installed-Size: 172
+Filename: debs/jp.dcsyhi.airaw.universalpatch_1.0.0_iphoneos-arm.deb
+Size: 18452
+MD5sum: 9c59b248208effef6761e3ceb6133ea5
+SHA256: 9be65ec83d109bab7fdfbe39849d7923156d63ac1d52a77bdbe3bccf1f53a2d7
+

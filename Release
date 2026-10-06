@@ -6,3 +6,15 @@ Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
 Description: 陈先生源 - Airaw 系列插件越狱源
+MD5Sum:
+ 2d2abc11c226e0c7f910c0cc9ae417b6     3765 Packages
+ 17647f231d17e4984090540f01493328     1911 Packages.bz2
+ c2d77bdfe01331bb755d91d19010a282     1656 Packages.xz
+SHA1:
+ bf128ce18de41883065237e0494ccb58422f3543     3765 Packages
+ 3440031793b6cc48ece25d00e6844c412fd48ac7     1911 Packages.bz2
+ d361a2aff19678e81e05bea611db772f2fd3935b     1656 Packages.xz
+SHA256:
+ 6ef2a917cca03778534735b43adc1c36135c68d272fe15855a2bc37248f880b5     3765 Packages
+ 59583e3ac8abde03bc769bcd595455e43aee0dafe96146d82f655c9ac74c3e24     1911 Packages.bz2
+ cba3eae2933c419212046cf6c493f91a097073352833bd214d9485f45c29948b     1656 Packages.xz
