@@ -57,19 +57,20 @@ SHA256: 1e585c9556de25db5a5797fa15b2378863c2c932440dd8407e3a6dc09fa6532e
 
 Package: com.diy.easylink.carplayjump
 Name: 驾驶伴侣CarPlay跳转
-Description: 手机桥接驾驶伴侣（亿联/EasyLink）时劫持连接动作，自动触发/跳转到 CarPlay；适配 iOS 15-16 rootless（Dopamine）
+Description: 手机桥接驾驶伴侣（亿连 EasyLink）连接车机时自动拉起 CarPlay UI，无需盒子。内置日志（/var/mobile/Documents/EasyLinkCarPlayJump.log，触发时自动导出快照）与主屏监控 App「CarPlay跳转监控」：实时查看 WiFi/驾驶伴侣前台/最近命中与触发、滚动日志，支持一键手动触发。适配 iOS 15-16 rootless（Dopamine），arm64e。
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
 Maintainer: DIY
 Author: DIY
 Section: Tweaks
+Homepage: https://github.com/chen1203260599-web/EasyLinkCarPlayJump
 Architecture: iphoneos-arm64e
-Version: 0.1.0-1-1+debug
-Installed-Size: 80
-Filename: debs/com.diy.easylink.carplayjump_0.1.0-1-1+debug_iphoneos-arm64e.deb
-Size: 10400
-MD5sum: 2a40931eb45479ca2e0be5510c6b8c91
-SHA1: 786a25a189bfffdda1e68a9a48b1cdd1e7dbbbaf
-SHA256: 27a7972bb45119c3ae35f2be048e160a9eca19b26712961d6bdce25771d7866b
+Version: 0.2.0-1+debug
+Installed-Size: 196
+Filename: debs/com.diy.easylink.carplayjump_0.2.0-1+debug_iphoneos-arm64e.deb
+Size: 22338
+MD5sum: 065c6e7424387df017569cff83cd3b2c
+SHA1: 67274fa13ffffd08ce82da2eae8c320f65918925
+SHA256: 4e8b7c3012274e1ec649297a68bd9408a06d6636a0b4f27efddfdacc24d6af5e
 
 Package: com.userspace.carsplit
 Name: CarSplit
