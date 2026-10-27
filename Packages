@@ -64,13 +64,13 @@ Author: DIY
 Section: Tweaks
 Homepage: https://github.com/chen1203260599-web/EasyLinkCarPlayJump
 Architecture: iphoneos-arm64e
-Version: 0.2.0-1+debug
-Installed-Size: 196
-Filename: debs/com.diy.easylink.carplayjump_0.2.0-1+debug_iphoneos-arm64e.deb
-Size: 22338
-MD5sum: 065c6e7424387df017569cff83cd3b2c
-SHA1: 67274fa13ffffd08ce82da2eae8c320f65918925
-SHA256: 4e8b7c3012274e1ec649297a68bd9408a06d6636a0b4f27efddfdacc24d6af5e
+Version: 0.2.1-1+debug
+Installed-Size: 204
+Filename: debs/com.diy.easylink.carplayjump_0.2.1-1+debug_iphoneos-arm64e.deb
+Size: 24652
+MD5sum: 1d32a5bbed45b70c798fda91aacdc020
+SHA1: c665d1ca01d5e444ae6f4028c9e5603a2b817dfb
+SHA256: e6b1ab2bc69a6a93d24ef4f14242bda848a8ca98016ff42bdd1d29ca1884a01e
 
 Package: com.userspace.carsplit
 Name: CarSplit
