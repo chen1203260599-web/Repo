@@ -1,0 +1,3 @@
+# Theos 构建产物，绝不提交（DEB 最终复制到仓库根 debs/ 由 workflow 发布）
+.theos/
+packages/

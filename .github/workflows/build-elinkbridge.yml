@@ -61,7 +61,8 @@ jobs:
           DEB_NAME=$(ls ElinkBridge/packages/ | head -1)
           git config user.name "chen1203260599-web"
           git config user.email "chen1203260599-web@users.noreply.github.com"
-          git add -A
+          # 只提交发布产物（DEB + 索引 + 工具脚本），不提交 ElinkBridge 构建中间产物
+          git add debs/ Packages Packages.bz2 Packages.xz Packages.gz Release tools/
           if git diff --cached --quiet; then
             echo "no changes to commit"
           else
