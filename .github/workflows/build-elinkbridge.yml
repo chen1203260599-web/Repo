@@ -50,6 +50,8 @@ jobs:
       - name: Copy DEB to repo debs/
         run: |
           mkdir -p debs
+          # 清理旧版本，保证源内每个包只保留最新版本
+          rm -f debs/com.elinkbridge.ios_*.deb
           cp ElinkBridge/packages/*.deb debs/
           ls -la debs/
 

@@ -1,0 +1,8 @@
+﻿git : Rebasing (1/1)
+所在位置 行:1 字符: 142
++ ... ce -ErrorAction SilentlyContinue; git rebase origin/main 2>&1 | Out-F ...
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Rebasing (1/1):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Successfully rebased and updated refs/heads/main.
