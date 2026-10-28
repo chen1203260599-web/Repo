@@ -72,7 +72,6 @@
 
 - (NSDictionary *)parseAll {
     NSMutableDictionary *map = [NSMutableDictionary dictionary];
-    const uint8_t *p = _data.bytes;
     NSUInteger len = _data.length;
     NSUInteger off = 0;
     while (off < len) {
