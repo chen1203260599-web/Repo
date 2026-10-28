@@ -1,0 +1,113 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 122941599573,
+      "run_id": 40723822919,
+      "workflow_name": "Build & Publish ElinkBridge",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/chen1203260599-web/Repo/actions/runs/40723822919",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU3nnHs8AAAAcn-PvVQ",
+      "head_sha": "c029476dd94fdb7f72baadc0828aa9c5faf8431f",
+      "url": "https://api.github.com/repos/chen1203260599-web/Repo/actions/jobs/122941599573",
+      "html_url": "https://github.com/chen1203260599-web/Repo/actions/runs/40723822919/job/122941599573",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-28T16:13:25Z",
+      "started_at": "2026-10-28T16:13:27Z",
+      "completed_at": "2026-10-28T16:13:52Z",
+      "name": "build",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-28T16:13:28Z",
+          "completed_at": "2026-10-28T16:13:29Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-28T16:13:29Z",
+          "completed_at": "2026-10-28T16:13:30Z"
+        },
+        {
+          "name": "Install cross-compile deps",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-28T16:13:30Z",
+          "completed_at": "2026-10-28T16:13:40Z"
+        },
+        {
+          "name": "Install Theos + iOS SDK",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 4,
+          "started_at": "2026-10-28T16:13:40Z",
+          "completed_at": "2026-10-28T16:13:49Z"
+        },
+        {
+          "name": "Build ElinkBridge DEB",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-10-28T16:13:49Z",
+          "completed_at": "2026-10-28T16:13:49Z"
+        },
+        {
+          "name": "Copy DEB to repo debs/",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-10-28T16:13:49Z",
+          "completed_at": "2026-10-28T16:13:49Z"
+        },
+        {
+          "name": "Rebuild repo index (Packages/Release)",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-10-28T16:13:49Z",
+          "completed_at": "2026-10-28T16:13:49Z"
+        },
+        {
+          "name": "Commit & push back",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-28T16:13:49Z",
+          "completed_at": "2026-10-28T16:13:49Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-28T16:13:49Z",
+          "completed_at": "2026-10-28T16:13:49Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-28T16:13:49Z",
+          "completed_at": "2026-10-28T16:13:50Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/chen1203260599-web/Repo/check-runs/122941599573",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000255,
+      "runner_name": "GitHub Actions 1000000255",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

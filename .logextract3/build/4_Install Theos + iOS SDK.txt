@@ -1,0 +1,37 @@
+﻿2026-10-28T16:13:40.2619033Z ##[group]Run git clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"
+2026-10-28T16:13:40.2619828Z [36;1mgit clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"[0m
+2026-10-28T16:13:40.2620448Z [36;1mgit clone --depth 1 https://github.com/theos/sdks "$HOME/theos/sdks"[0m
+2026-10-28T16:13:40.2620919Z [36;1mls "$HOME/theos/sdks" | head -5[0m
+2026-10-28T16:13:40.2621331Z [36;1mecho "THEOS=$HOME/theos" >> "$GITHUB_ENV"[0m
+2026-10-28T16:13:40.2635847Z shell: /usr/bin/bash -e {0}
+2026-10-28T16:13:40.2636222Z ##[endgroup]
+2026-10-28T16:13:40.3823787Z Cloning into '/home/runner/theos'...
+2026-10-28T16:13:41.3748526Z Submodule 'vendor/dm.pl' (https://github.com/theos/dm.pl.git) registered for path 'vendor/dm.pl'
+2026-10-28T16:13:41.3750083Z Submodule 'vendor/include' (https://github.com/theos/headers.git) registered for path 'vendor/include'
+2026-10-28T16:13:41.3753479Z Submodule 'vendor/lib' (https://github.com/theos/lib.git) registered for path 'vendor/lib'
+2026-10-28T16:13:41.3757132Z Submodule 'vendor/logos' (https://github.com/theos/logos.git) registered for path 'vendor/logos'
+2026-10-28T16:13:41.3758949Z Submodule 'vendor/nic' (https://github.com/theos/nic.git) registered for path 'vendor/nic'
+2026-10-28T16:13:41.3762976Z Submodule 'vendor/orion' (https://github.com/theos/orion.git) registered for path 'vendor/orion'
+2026-10-28T16:13:41.3767734Z Submodule 'vendor/swift-support' (https://github.com/theos/swift-support.git) registered for path 'vendor/swift-support'
+2026-10-28T16:13:41.3770406Z Submodule 'vendor/templates' (https://github.com/theos/templates.git) registered for path 'vendor/templates'
+2026-10-28T16:13:41.3793202Z Cloning into '/home/runner/theos/vendor/dm.pl'...
+2026-10-28T16:13:43.1586163Z Cloning into '/home/runner/theos/vendor/include'...
+2026-10-28T16:13:44.0083869Z Cloning into '/home/runner/theos/vendor/lib'...
+2026-10-28T16:13:44.8749624Z Cloning into '/home/runner/theos/vendor/logos'...
+2026-10-28T16:13:45.6867577Z Cloning into '/home/runner/theos/vendor/nic'...
+2026-10-28T16:13:46.6566047Z Cloning into '/home/runner/theos/vendor/orion'...
+2026-10-28T16:13:47.4760286Z Cloning into '/home/runner/theos/vendor/swift-support'...
+2026-10-28T16:13:48.2727915Z Cloning into '/home/runner/theos/vendor/templates'...
+2026-10-28T16:13:49.1397830Z Submodule path 'vendor/dm.pl': checked out 'd9a3b72e274226dd2823c0a7c1d6d05099f4f51c'
+2026-10-28T16:13:49.1664293Z Submodule path 'vendor/include': checked out '13c1f17176d7efe6871551cd69a75b71ac4eeaf1'
+2026-10-28T16:13:49.1862365Z Submodule path 'vendor/lib': checked out '6f2af307568e6b8c52181d26314b0cd69ffaf188'
+2026-10-28T16:13:49.1952677Z Submodule path 'vendor/logos': checked out '365a4e7028234e90bc2cbc724e5c87607130d3b3'
+2026-10-28T16:13:49.2033352Z Submodule path 'vendor/nic': checked out '4e7adcbeac2e4636b91e2f76341adfe4c4d0ceec'
+2026-10-28T16:13:49.2161952Z Submodule path 'vendor/orion': checked out '762159dc214d5aafa2edfc7554c659fc3c658b5b'
+2026-10-28T16:13:49.2179666Z Submodule 'fishhook' (https://github.com/facebook/fishhook.git) registered for path 'vendor/orion/fishhook'
+2026-10-28T16:13:49.2201579Z Cloning into '/home/runner/theos/vendor/orion/fishhook'...
+2026-10-28T16:13:49.7669661Z Submodule path 'vendor/orion/fishhook': checked out 'aadc161ac3b80db07a9908851839a17ba63a9eb1'
+2026-10-28T16:13:49.7740605Z Submodule path 'vendor/swift-support': checked out '4cf59ff04cdb2ceb27ea2228753e0497297b6182'
+2026-10-28T16:13:49.7860250Z Submodule path 'vendor/templates': checked out '6c3944e281c4726f1383755d0fbb642840312d28'
+2026-10-28T16:13:49.7891969Z fatal: destination path '/home/runner/theos/sdks' already exists and is not an empty directory.
+2026-10-28T16:13:49.7906432Z ##[error]Process completed with exit code 128.
