@@ -24,6 +24,9 @@
 #include <stdarg.h>
 #include <sys/time.h>
 
+// ELBLog 全局日志入口（定义在本文件下部；此处前置声明供早期函数调用，CarLifeServer.m 以 extern 引用）
+void ELBLog(NSString *fmt, ...);
+
 static BOOL elb_logEnabled = YES;
 static BOOL elb_notifyEnabled = YES;
 static BOOL elb_serverEnabled = YES;
