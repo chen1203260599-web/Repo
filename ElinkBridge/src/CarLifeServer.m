@@ -22,12 +22,12 @@ NSString *const ELBServerStateChangedNotification = @"com.elinkbridge.ios/statec
 extern void ELBLog(NSString *fmt, ...);
 
 @interface CarLifeServer () {
-    dispatch_queue_t _acceptQueue;
     dispatch_queue_t _cmdQueue;
-    NSMutableArray<NSNumber *> *_listenFds;
     NSMutableDictionary<NSNumber *, NSMutableData *> *_readBufs;   // fd -> 累积缓冲
     BOOL _running;
 }
+@property (nonatomic, strong) NSMutableArray<NSNumber *> *listenFds;
+@property (nonatomic, strong) dispatch_queue_t acceptQueue;
 @property (nonatomic, readwrite) ELBConnectPhase phase;
 @property (nonatomic, readwrite) NSString *huAddress;
 @end
@@ -48,9 +48,9 @@ static CarLifeServer *g_server;
     self = [super init];
     if (self) {
         _supportedPorts = @[@7240, @8240, @9240, @9241, @9242, @9340, @9440];
-        _listenFds = [NSMutableArray array];
+        self.listenFds = [NSMutableArray array];
         _readBufs = [NSMutableDictionary dictionary];
-        _acceptQueue = dispatch_queue_create("elb.accept", DISPATCH_QUEUE_SERIAL);
+        self.acceptQueue = dispatch_queue_create("elb.accept", DISPATCH_QUEUE_SERIAL);
         _cmdQueue = dispatch_queue_create("elb.cmd", DISPATCH_QUEUE_SERIAL);
         _phase = ELBPhaseIdle;
     }
@@ -131,25 +131,11 @@ static CarLifeServer *g_server;
 }
 
 // ---------- 车机热点模式：主动连接 ----------
-// 优先用 SystemConfiguration 读全局 IPv4 Router（DHCP 下即车机热点网关 IP），
-// 失败则回退 getifaddrs 取本机 IP 猜测 .1/.254。
+// 网关探测策略（iOS 上 SCDynamicStore API 标记为不可用，故采用）：
+// 1) getifaddrs 取 WiFi(en0) 本机 IP → 推 x.x.x.1 / x.x.x.254；
+// 2) 常见手机热点网段兜底（Android 192.168.43.x、iPhone 172.20.10.x、家用 192.168.1/0.x）。
 + (NSArray<NSString *> *)candidateHostIPs {
     NSMutableArray *cands = [NSMutableArray array];
-    // 1) SCDynamicStore 的 Router
-    SCDynamicStoreRef store = SCDynamicStoreCreate(NULL, CFSTR("elb"), NULL, NULL);
-    if (store) {
-        CFDictionaryRef ipv4 = SCDynamicStoreCopyValue(store, CFSTR("State:/Network/Global/IPv4"));
-        if (ipv4) {
-            CFStringRef router = CFDictionaryGetValue(ipv4, CFSTR("Router"));
-            if (router) {
-                NSString *r = (__bridge NSString *)router;
-                if (r.length) [cands addObject:r];
-            }
-            CFRelease(ipv4);
-        }
-        CFRelease(store);
-    }
-    // 2) getifaddrs：en0 本机 IP，推 x.x.x.1 / x.x.x.254
     struct ifaddrs *ifas = NULL;
     if (getifaddrs(&ifas) == 0) {
         for (struct ifaddrs *ifa = ifas; ifa; ifa = ifa->ifa_next) {
@@ -169,6 +155,12 @@ static CarLifeServer *g_server;
         }
         freeifaddrs(ifas);
     }
+    // 常见热点网段兜底
+    [cands addObject:@"192.168.43.1"];  // Android 热点（车机驾驶伴侣常见）
+    [cands addObject:@"192.168.43.254"];
+    [cands addObject:@"172.20.10.1"];   // iPhone 个人热点
+    [cands addObject:@"192.168.1.1"];
+    [cands addObject:@"192.168.0.1"];
     // 去重保序
     NSMutableArray *uniq = [NSMutableArray array];
     for (NSString *c in cands) {

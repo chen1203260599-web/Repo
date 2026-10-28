@@ -1,0 +1,55 @@
+﻿2026-10-28T16:23:21.6083563Z ##[group]Run git clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"
+2026-10-28T16:23:21.6084302Z [36;1mgit clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"[0m
+2026-10-28T16:23:21.6084752Z [36;1mrm -rf "$HOME/theos/sdks"[0m
+2026-10-28T16:23:21.6085237Z [36;1mgit clone --depth 1 --filter=blob:none --sparse https://github.com/theos/sdks.git "$HOME/theos/sdks"[0m
+2026-10-28T16:23:21.6085820Z [36;1mgit -C "$HOME/theos/sdks" sparse-checkout set iPhoneOS14.5.sdk[0m
+2026-10-28T16:23:21.6086208Z [36;1mls "$HOME/theos/sdks"[0m
+2026-10-28T16:23:21.6086512Z [36;1m# Linux iOS 交叉工具链（与官方 install-theos 相同的来源）[0m
+2026-10-28T16:23:21.6086865Z [36;1mmkdir -p "$HOME/theos/toolchain"[0m
+2026-10-28T16:23:21.6087562Z [36;1mcurl -sL https://github.com/L1ghtmann/llvm-project/releases/latest/download/iOSToolchain-x86_64.tar.xz | tar -xJf - -C "$HOME/theos/toolchain/"[0m
+2026-10-28T16:23:21.6088284Z [36;1mls "$HOME/theos/toolchain/linux/iphone/bin/" | head[0m
+2026-10-28T16:23:21.6088710Z [36;1mecho "THEOS=$HOME/theos" >> "$GITHUB_ENV"[0m
+2026-10-28T16:23:21.6161263Z shell: /usr/bin/bash -e {0}
+2026-10-28T16:23:21.6161551Z ##[endgroup]
+2026-10-28T16:23:21.6262705Z Cloning into '/home/runner/theos'...
+2026-10-28T16:23:22.4622810Z Submodule 'vendor/dm.pl' (https://github.com/theos/dm.pl.git) registered for path 'vendor/dm.pl'
+2026-10-28T16:23:22.4624730Z Submodule 'vendor/include' (https://github.com/theos/headers.git) registered for path 'vendor/include'
+2026-10-28T16:23:22.4628916Z Submodule 'vendor/lib' (https://github.com/theos/lib.git) registered for path 'vendor/lib'
+2026-10-28T16:23:22.4631802Z Submodule 'vendor/logos' (https://github.com/theos/logos.git) registered for path 'vendor/logos'
+2026-10-28T16:23:22.4635464Z Submodule 'vendor/nic' (https://github.com/theos/nic.git) registered for path 'vendor/nic'
+2026-10-28T16:23:22.4638285Z Submodule 'vendor/orion' (https://github.com/theos/orion.git) registered for path 'vendor/orion'
+2026-10-28T16:23:22.4641248Z Submodule 'vendor/swift-support' (https://github.com/theos/swift-support.git) registered for path 'vendor/swift-support'
+2026-10-28T16:23:22.4644373Z Submodule 'vendor/templates' (https://github.com/theos/templates.git) registered for path 'vendor/templates'
+2026-10-28T16:23:22.4672023Z Cloning into '/home/runner/theos/vendor/dm.pl'...
+2026-10-28T16:23:23.0709202Z Cloning into '/home/runner/theos/vendor/include'...
+2026-10-28T16:23:24.0745812Z Cloning into '/home/runner/theos/vendor/lib'...
+2026-10-28T16:23:24.8686407Z Cloning into '/home/runner/theos/vendor/logos'...
+2026-10-28T16:23:25.9326790Z Cloning into '/home/runner/theos/vendor/nic'...
+2026-10-28T16:23:27.6109267Z Cloning into '/home/runner/theos/vendor/orion'...
+2026-10-28T16:23:28.3669139Z Cloning into '/home/runner/theos/vendor/swift-support'...
+2026-10-28T16:23:28.8676819Z Cloning into '/home/runner/theos/vendor/templates'...
+2026-10-28T16:23:29.5579317Z Submodule path 'vendor/dm.pl': checked out 'd9a3b72e274226dd2823c0a7c1d6d05099f4f51c'
+2026-10-28T16:23:29.6031038Z Submodule path 'vendor/include': checked out '13c1f17176d7efe6871551cd69a75b71ac4eeaf1'
+2026-10-28T16:23:29.6288765Z Submodule path 'vendor/lib': checked out '6f2af307568e6b8c52181d26314b0cd69ffaf188'
+2026-10-28T16:23:29.6412791Z Submodule path 'vendor/logos': checked out '365a4e7028234e90bc2cbc724e5c87607130d3b3'
+2026-10-28T16:23:29.6522274Z Submodule path 'vendor/nic': checked out '4e7adcbeac2e4636b91e2f76341adfe4c4d0ceec'
+2026-10-28T16:23:29.6698389Z Submodule path 'vendor/orion': checked out '762159dc214d5aafa2edfc7554c659fc3c658b5b'
+2026-10-28T16:23:29.6718564Z Submodule 'fishhook' (https://github.com/facebook/fishhook.git) registered for path 'vendor/orion/fishhook'
+2026-10-28T16:23:29.6745583Z Cloning into '/home/runner/theos/vendor/orion/fishhook'...
+2026-10-28T16:23:30.4207444Z Submodule path 'vendor/orion/fishhook': checked out 'aadc161ac3b80db07a9908851839a17ba63a9eb1'
+2026-10-28T16:23:30.4310050Z Submodule path 'vendor/swift-support': checked out '4cf59ff04cdb2ceb27ea2228753e0497297b6182'
+2026-10-28T16:23:30.4502699Z Submodule path 'vendor/templates': checked out '6c3944e281c4726f1383755d0fbb642840312d28'
+2026-10-28T16:23:30.4557273Z Cloning into '/home/runner/theos/sdks'...
+2026-10-28T16:23:53.1479672Z LICENSE.md
+2026-10-28T16:23:53.1479996Z README.md
+2026-10-28T16:23:53.1480207Z iPhoneOS14.5.sdk
+2026-10-28T16:23:59.2917598Z ar
+2026-10-28T16:23:59.2917972Z as
+2026-10-28T16:23:59.2920762Z bitcode_strip
+2026-10-28T16:23:59.2921108Z bugpoint
+2026-10-28T16:23:59.2921410Z c-index-test
+2026-10-28T16:23:59.2921699Z check_dylib
+2026-10-28T16:23:59.2921967Z checksyms
+2026-10-28T16:23:59.2922254Z clang
+2026-10-28T16:23:59.2922695Z clang++
+2026-10-28T16:23:59.2922968Z clang-11
