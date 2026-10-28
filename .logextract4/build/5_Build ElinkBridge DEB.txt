@@ -1,0 +1,10 @@
+﻿2026-10-28T16:16:10.2914350Z ##[group]Run make package
+2026-10-28T16:16:10.2914673Z [36;1mmake package[0m
+2026-10-28T16:16:10.2914907Z [36;1mls -la packages/[0m
+2026-10-28T16:16:10.2942563Z shell: /usr/bin/bash -e {0}
+2026-10-28T16:16:10.2942982Z env:
+2026-10-28T16:16:10.2943310Z   THEOS: /home/runner/theos
+2026-10-28T16:16:10.2943709Z ##[endgroup]
+2026-10-28T16:16:10.3609741Z [0;31m==> [1;31mError:[m You do not have any SDKs in /home/runner/theos/sdks.
+2026-10-28T16:16:10.3610816Z make: *** [/home/runner/theos/makefiles/targets/_common/darwin_head.mk:117: before-all] Error 1
+2026-10-28T16:16:10.3626759Z ##[error]Process completed with exit code 2.

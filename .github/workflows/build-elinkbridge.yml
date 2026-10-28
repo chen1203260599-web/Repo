@@ -31,7 +31,10 @@ jobs:
       - name: Install Theos + iOS SDK
         run: |
           git clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"
-          ls "$HOME/theos/sdks" | head -8
+          rm -rf "$HOME/theos/sdks"
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/theos/sdks.git "$HOME/theos/sdks"
+          git -C "$HOME/theos/sdks" sparse-checkout set iPhoneOS14.5.sdk
+          ls "$HOME/theos/sdks"
           echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
 
       - name: Build ElinkBridge DEB

@@ -1,0 +1,86 @@
+﻿2026-10-28T16:15:51.7557778Z ##[group]Run sudo apt-get update
+2026-10-28T16:15:51.7559229Z [36;1msudo apt-get update[0m
+2026-10-28T16:15:51.7560947Z [36;1msudo apt-get install -y clang dpkg-dev zstd xz-utils bzip2 file[0m
+2026-10-28T16:15:51.7563112Z [36;1m# ldid 不在 Ubuntu 官方源，从 Procursus 官方 release 下载 Linux 静态二进制[0m
+2026-10-28T16:15:51.7566407Z [36;1mcurl -sL -o /usr/local/bin/ldid https://github.com/ProcursusTeam/ldid/releases/latest/download/ldid_linux_x86_64[0m
+2026-10-28T16:15:51.7569054Z [36;1mchmod +x /usr/local/bin/ldid[0m
+2026-10-28T16:15:51.7570345Z [36;1mldid 2>&1 | head -1 || true[0m
+2026-10-28T16:15:51.7597323Z shell: /usr/bin/bash -e {0}
+2026-10-28T16:15:51.7598572Z ##[endgroup]
+2026-10-28T16:15:51.8447547Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-28T16:15:51.8769883Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-28T16:15:51.8774874Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-28T16:15:51.8806444Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-28T16:15:51.8847955Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-28T16:15:51.8877723Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-28T16:15:52.0129738Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [602 kB]
+2026-10-28T16:15:52.0321046Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [666 kB]
+2026-10-28T16:15:52.0701427Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1406 kB]
+2026-10-28T16:15:52.0803724Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [310 kB]
+2026-10-28T16:15:52.0827758Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1707 kB]
+2026-10-28T16:15:52.0919704Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [343 kB]
+2026-10-28T16:15:52.0947793Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1809 kB]
+2026-10-28T16:15:52.1060260Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+2026-10-28T16:15:52.1070117Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+2026-10-28T16:15:52.1918005Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1146 kB]
+2026-10-28T16:15:52.1957247Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+2026-10-28T16:15:52.1976297Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1223 kB]
+2026-10-28T16:15:52.2467307Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+2026-10-28T16:15:55.4266240Z Fetched 10.5 MB in 1s (8931 kB/s)
+2026-10-28T16:15:56.5203388Z Reading package lists...
+2026-10-28T16:15:56.5592835Z Reading package lists...
+2026-10-28T16:15:56.7864254Z Building dependency tree...
+2026-10-28T16:15:56.7871911Z Reading state information...
+2026-10-28T16:15:56.9759208Z dpkg-dev is already the newest version (1.22.6ubuntu6.6).
+2026-10-28T16:15:56.9760238Z zstd is already the newest version (1.5.5+dfsg2-2build1.1).
+2026-10-28T16:15:56.9760836Z zstd set to manually installed.
+2026-10-28T16:15:56.9761372Z xz-utils is already the newest version (5.6.1+really5.4.5-1ubuntu0.4).
+2026-10-28T16:15:56.9762052Z bzip2 is already the newest version (1.0.8-5.1ubuntu0.1).
+2026-10-28T16:15:56.9762712Z file is already the newest version (1:5.45-3build1).
+2026-10-28T16:15:56.9763409Z The following NEW packages will be installed:
+2026-10-28T16:15:56.9768702Z   clang
+2026-10-28T16:15:56.9976998Z 0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+2026-10-28T16:15:56.9977834Z Need to get 5846 B of archives.
+2026-10-28T16:15:56.9978528Z After this operation, 20.5 kB of additional disk space will be used.
+2026-10-28T16:15:56.9979282Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-28T16:15:57.0601222Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 clang amd64 1:18.0-59~exp2 [5846 B]
+2026-10-28T16:15:57.3434498Z Fetched 5846 B in 0s (77.9 kB/s)
+2026-10-28T16:15:57.3682899Z Selecting previously unselected package clang.
+2026-10-28T16:15:57.3956678Z (Reading database ... 
+2026-10-28T16:15:57.3957530Z (Reading database ... 5%
+2026-10-28T16:15:57.3958286Z (Reading database ... 10%
+2026-10-28T16:15:57.3958750Z (Reading database ... 15%
+2026-10-28T16:15:57.3959331Z (Reading database ... 20%
+2026-10-28T16:15:57.3960249Z (Reading database ... 25%
+2026-10-28T16:15:57.3961163Z (Reading database ... 30%
+2026-10-28T16:15:57.3961546Z (Reading database ... 35%
+2026-10-28T16:15:57.3961957Z (Reading database ... 40%
+2026-10-28T16:15:57.3962437Z (Reading database ... 45%
+2026-10-28T16:15:57.3962937Z (Reading database ... 50%
+2026-10-28T16:15:57.4013747Z (Reading database ... 55%
+2026-10-28T16:15:57.5273682Z (Reading database ... 60%
+2026-10-28T16:15:57.7332692Z (Reading database ... 65%
+2026-10-28T16:15:57.9420545Z (Reading database ... 70%
+2026-10-28T16:15:58.1324176Z (Reading database ... 75%
+2026-10-28T16:15:58.2882857Z (Reading database ... 80%
+2026-10-28T16:15:58.4245645Z (Reading database ... 85%
+2026-10-28T16:15:58.5460106Z (Reading database ... 90%
+2026-10-28T16:15:58.7253524Z (Reading database ... 95%
+2026-10-28T16:15:58.7254180Z (Reading database ... 100%
+2026-10-28T16:15:58.7254767Z (Reading database ... 215504 files and directories currently installed.)
+2026-10-28T16:15:58.7300297Z Preparing to unpack .../clang_1%3a18.0-59~exp2_amd64.deb ...
+2026-10-28T16:15:58.7327235Z Unpacking clang (1:18.0-59~exp2) ...
+2026-10-28T16:15:58.7785062Z Setting up clang (1:18.0-59~exp2) ...
+2026-10-28T16:15:58.8038615Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-10-28T16:15:58.8061822Z Not building database; man-db/auto-update is not 'true'.
+2026-10-28T16:15:59.4874913Z 
+2026-10-28T16:15:59.4875928Z Running kernel seems to be up-to-date.
+2026-10-28T16:15:59.4876319Z 
+2026-10-28T16:15:59.4876854Z No services need to be restarted.
+2026-10-28T16:15:59.4877466Z 
+2026-10-28T16:15:59.4877998Z No containers need to be restarted.
+2026-10-28T16:15:59.4878437Z 
+2026-10-28T16:15:59.4878699Z No user sessions are running outdated binaries.
+2026-10-28T16:15:59.4879172Z 
+2026-10-28T16:15:59.4879595Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-28T16:16:01.4117650Z Link Identity Editor v2.1.5-procursus7
