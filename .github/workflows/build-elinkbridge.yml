@@ -28,13 +28,17 @@ jobs:
           chmod +x /usr/local/bin/ldid
           ldid 2>&1 | head -1 || true
 
-      - name: Install Theos + iOS SDK
+      - name: Install Theos + iOS SDK + Linux toolchain
         run: |
           git clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"
           rm -rf "$HOME/theos/sdks"
           git clone --depth 1 --filter=blob:none --sparse https://github.com/theos/sdks.git "$HOME/theos/sdks"
           git -C "$HOME/theos/sdks" sparse-checkout set iPhoneOS14.5.sdk
           ls "$HOME/theos/sdks"
+          # Linux iOS 交叉工具链（与官方 install-theos 相同的来源）
+          mkdir -p "$HOME/theos/toolchain"
+          curl -sL https://github.com/L1ghtmann/llvm-project/releases/latest/download/iOSToolchain-x86_64.tar.xz | tar -xJf - -C "$HOME/theos/toolchain/"
+          ls "$HOME/theos/toolchain/linux/iphone/bin/" | head
           echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
 
       - name: Build ElinkBridge DEB
