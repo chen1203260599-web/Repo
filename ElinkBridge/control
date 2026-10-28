@@ -1,0 +1,9 @@
+Package: com.elinkbridge.ios
+Name: ElinkBridge
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: iPhone 作为输出端向车机「驾驶伴侣」发送亿连/CarLife 兼容握手协议（7 端口 TCP：7240/8240/9240/9241/9242/9340/9440），完成版本协商/设备信息/模块控制/特征配置/视频参数协商，为拉起系统 CarPlay 显示打通协议链路。车机热点模式自动解析网关并主动连接车机 7240，同时保留监听兜底；全消息日志 /var/mobile/Library/Logs/ElinkBridge.log，设置面板含协议服务器开关。
+Maintainer: ElinkBridge Project
+Author: ElinkBridge Project
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), firmware (>= 14.0)

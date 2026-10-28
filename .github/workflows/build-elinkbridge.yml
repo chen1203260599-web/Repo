@@ -1,0 +1,54 @@
+name: Build & Publish ElinkBridge
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "ElinkBridge/**"
+      - "tools/rebuild_index.py"
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dpkg & zstd & Theos
+        run: |
+          brew install dpkg zstd || true
+          python3 -m pip install --quiet zstandard || true
+          git clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"
+          echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
+
+      - name: Build ElinkBridge DEB
+        working-directory: ElinkBridge
+        run: |
+          make package
+          ls -la packages/
+
+      - name: Copy DEB to repo debs/
+        run: |
+          mkdir -p debs
+          cp ElinkBridge/packages/*.deb debs/
+          ls -la debs/
+
+      - name: Rebuild repo index (Packages/Release)
+        run: python3 tools/rebuild_index.py
+
+      - name: Commit & push back
+        run: |
+          DEB_NAME=$(ls ElinkBridge/packages/ | head -1)
+          git config user.name "chen1203260599-web"
+          git config user.email "chen1203260599-web@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "publish ElinkBridge ${DEB_NAME}"
+            git push origin main
+          fi
