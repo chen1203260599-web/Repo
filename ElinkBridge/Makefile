@@ -5,7 +5,7 @@ THEOS_PACKAGE_SCHEME := rootless
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = ElinkBridge
-ElinkBridge_FILES = Tweak.xm src/CarLifeProto.m src/CarLifeServer.m
+ElinkBridge_FILES = Tweak.xm src/ELBLog.m src/CarLifeProto.m src/CarLifeServer.m
 ElinkBridge_CFLAGS = -fobjc-arc
 ElinkBridge_FRAMEWORKS = Foundation UIKit SystemConfiguration
 ElinkBridge_INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries

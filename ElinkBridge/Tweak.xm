@@ -21,11 +21,7 @@
 #import <objc/runtime.h>
 #import <notify.h>
 #import "src/CarLifeServer.h"
-#include <stdarg.h>
-#include <sys/time.h>
-
-// ELBLog 全局日志入口（定义在本文件下部；此处前置声明供早期函数调用，CarLifeServer.m 以 extern 引用）
-void ELBLog(NSString *fmt, ...);
+#import "src/ELBLog.h"
 
 static BOOL elb_logEnabled = YES;
 static BOOL elb_notifyEnabled = YES;
@@ -39,6 +35,7 @@ static NSString *ELBSettingsSuite(void) { return @"com.elinkbridge.ios"; }
 static void ELBReloadSettings(void) {
     NSUserDefaults *ud = [[NSUserDefaults alloc] initWithSuiteName:ELBSettingsSuite()];
     elb_logEnabled = [ud objectForKey:@"logEnabled"] ? [ud boolForKey:@"logEnabled"] : YES;
+    ELBLogEnabled = elb_logEnabled;   // 同步日志总开关到独立日志模块
     elb_notifyEnabled = [ud objectForKey:@"notifyEnabled"] ? [ud boolForKey:@"notifyEnabled"] : YES;
     elb_serverEnabled = [ud objectForKey:@"serverEnabled"] ? [ud boolForKey:@"serverEnabled"] : YES;
     NSString *ssid = [ud stringForKey:@"hotspotSSID"];
@@ -47,47 +44,6 @@ static void ELBReloadSettings(void) {
     if (bt.length) elb_btName = bt;
     ELBLog(@"设置已加载: log=%d notify=%d server=%d ssid=%@ bt=%@",
            elb_logEnabled, elb_notifyEnabled, elb_serverEnabled, elb_hotspotSSID, elb_btName);
-}
-
-static NSString *ELBLogPath(void) {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    return [[paths firstObject] stringByAppendingPathComponent:@"Logs/ElinkBridge.log"];
-}
-
-static void ELBWriteLog(NSString *msg) {
-    // 日志写入串行化，避免多线程（协议服务器/轮询/通知）交错写同一文件
-    static dispatch_queue_t logQ;
-    static dispatch_once_t once;
-    dispatch_once(&once, ^{ logQ = dispatch_queue_create("elb.log", DISPATCH_QUEUE_SERIAL); });
-    dispatch_sync(logQ, ^{
-        NSString *logPath = ELBLogPath();
-        NSFileManager *fm = [NSFileManager defaultManager];
-        NSString *dir = [logPath stringByDeletingLastPathComponent];
-        if (![fm fileExistsAtPath:dir]) {
-            [fm createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
-        }
-        NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        df.dateFormat = @"yyyy-MM-dd HH:mm:ss.SSS";
-        NSString *line = [NSString stringWithFormat:@"[%@] %@\n", [df stringFromDate:[NSDate date]], msg];
-        NSFileHandle *fh = [NSFileHandle fileHandleForWritingAtPath:logPath];
-        if (!fh) {
-            [line writeToFile:logPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-        } else {
-            [fh seekToEndOfFile];
-            [fh writeData:[line dataUsingEncoding:NSUTF8StringEncoding]];
-            [fh closeFile];
-        }
-    });
-}
-
-// 全局日志入口（CarLifeServer.m 以 extern 引用，必须非 static）
-void ELBLog(NSString *fmt, ...) {
-    if (!elb_logEnabled) return;
-    va_list ap;
-    va_start(ap, fmt);
-    NSString *msg = [[NSString alloc] initWithFormat:fmt arguments:ap];
-    va_end(ap);
-    ELBWriteLog(msg);
 }
 
 // ---------- 反射查询 CarKit 状态（永不 crash） ----------
