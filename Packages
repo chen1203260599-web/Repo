@@ -22,10 +22,7 @@ Maintainer: Airaw
 Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
-Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。
- 支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式
- （自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与
- 缩放比例，保存后即时热重载。
+Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。 支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式 （自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与 缩放比例，保存后即时热重载。
 Architecture: iphoneos-arm64
 Version: 1.0.6
 Installed-Size: 372
@@ -42,10 +39,7 @@ Maintainer: Airaw
 Author: Airaw
 Section: Tweaks
 Tag: compatible_min::ios16.0
-Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。
- 支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式
- （自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与
- 缩放比例，保存后即时热重载。
+Description: CarPlay 画面自适应插件：为 CarPlay 上的应用提供画面自适应与布局修复。 支持在设置中直接选择已安装应用或输入 Bundle ID，为每个应用独立配置显示模式 （自动/全屏/等比适应/自定义）、画面边框修复、Metal 渲染修复、网页视图修复与 缩放比例，保存后即时热重载。
 Architecture: iphoneos-arm64e
 Version: 1.0.6
 Installed-Size: 372
@@ -71,6 +65,22 @@ Size: 27092
 MD5sum: ee1f6072f6010fcef29a7a47eceeeb48
 SHA1: bab36601b796d8a76f89afb5c32e39e5fefec797
 SHA256: f6ed8f973d38b7c040ecafdf820df8547c6e562bbf94394df4ed6ed0bbcf2803
+
+Package: com.elinkbridge.ios
+Name: ElinkBridge
+Description: iPhone 作为输出端向车机「驾驶伴侣」发送亿连/CarLife 兼容握手协议（7 端口 TCP：7240/8240/9240/9241/9242/9340/9440），完成版本协商/设备信息/模块控制/特征配置/视频参数协商，为拉起系统 CarPlay 显示打通协议链路。车机热点模式自动解析网关并主动连接车机 7240，同时保留监听兜底；全消息日志 /var/mobile/Library/Logs/ElinkBridge.log，设置面板含协议服务器开关。
+Maintainer: ElinkBridge Project
+Author: ElinkBridge Project
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), firmware (>= 14.0)
+Architecture: iphoneos-arm64
+Version: 1.0.0-1+debug
+Installed-Size: 304
+Filename: debs/com.elinkbridge.ios_1.0.0-1+debug_iphoneos-arm64.deb
+Size: 43206
+MD5sum: dbfac32e390196a98e611ce0903c3f2c
+SHA1: 6f0dca3d59c7c6aa89e86478ffbcb58afd3ac0b2
+SHA256: 667960c7ded35d0b22144535708aeb7d29edbfd98b5ce6bface4f7db55bff2a8
 
 Package: com.userspace.carsplit
 Name: CarSplit
