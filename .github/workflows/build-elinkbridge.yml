@@ -6,23 +6,29 @@ on:
     paths:
       - "ElinkBridge/**"
       - "tools/rebuild_index.py"
+      - ".github/workflows/build-elinkbridge.yml"
     branches:
       - main
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install dpkg & zstd & Theos
+      - name: Install cross-compile deps
         run: |
-          brew install dpkg zstd || true
-          python3 -m pip install --quiet zstandard || true
+          sudo apt-get update
+          sudo apt-get install -y clang ldid dpkg-dev zstd xz-utils bzip2 file
+
+      - name: Install Theos + iOS SDK
+        run: |
           git clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"
+          git clone --depth 1 https://github.com/theos/sdks "$HOME/theos/sdks"
+          ls "$HOME/theos/sdks" | head -5
           echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
 
       - name: Build ElinkBridge DEB
