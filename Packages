@@ -82,6 +82,22 @@ MD5sum: dbfac32e390196a98e611ce0903c3f2c
 SHA1: 6f0dca3d59c7c6aa89e86478ffbcb58afd3ac0b2
 SHA256: 667960c7ded35d0b22144535708aeb7d29edbfd98b5ce6bface4f7db55bff2a8
 
+Package: com.elinkbridge.ios
+Name: ElinkBridge
+Description: iPhone 作为输出端向车机「驾驶伴侣」发送亿连/CarLife 兼容握手协议（7 端口 TCP：7240/8240/9240/9241/9242/9340/9440），完成版本协商/设备信息/模块控制/特征配置/视频参数协商，为拉起系统 CarPlay 显示打通协议链路。车机热点模式自动解析网关并主动连接车机 7240，同时保留监听兜底；全消息日志 /var/mobile/Library/Logs/ElinkBridge.log，设置面板含协议服务器开关。
+Maintainer: ElinkBridge Project
+Author: ElinkBridge Project
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), firmware (>= 14.0)
+Architecture: iphoneos-arm64
+Version: 1.0.0-2+debug
+Installed-Size: 304
+Filename: debs/com.elinkbridge.ios_1.0.0-2+debug_iphoneos-arm64.deb
+Size: 43234
+MD5sum: 53bbe0ec7952b80bd8b00cdba3bd0e9d
+SHA1: 7410c373f45db6fb6217c2d8c0c3c697128228a0
+SHA256: e999befd56c56a43943380796fd3b66ac56514a8551d8a74e50a8ff52cbbce3b
+
 Package: com.userspace.carsplit
 Name: CarSplit
 Description: CarPlay 双应用方案（原创实现）。让任意 App 出现在车机应用选择器；CarPlay 连接后自动启动你选好的两个 App；v0.2 新增手机屏分屏预览容器（双面板 + 可拖拽分隔条），无需车机即可测试；实时画面桥接规划在 v0.3。

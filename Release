@@ -6,19 +6,19 @@ Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
 Description: 陈先生源 - Airaw 系列插件越狱源
-Date: Wed, 28 Oct 2026 16:44:43 +0000
+Date: Wed, 28 Oct 2026 16:54:29 +0000
 MD5Sum:
- 1e2dff104d99aadb5d89d05edc557b98         6800 Packages
- a2f582d24fadf11e2abe9f54874efc71         3019 Packages.bz2
- cf556e2467d576a5a2f34c3fba028afa         2736 Packages.xz
- 3f7b021905f692654160d51791b72474         2923 Packages.gz
+ 14fecfc0dcab43428c85ff3acde2c931         7805 Packages
+ 38e730c09d588dbbedbcb14e4b9dc9aa         3228 Packages.bz2
+ a1daf4c18658760c38c1f01de6848145         2832 Packages.xz
+ 2a06cb671201b79cf73d0246bf6501bd         3036 Packages.gz
 SHA1:
- 6c094b6d163f1ea5640cd6fea60ffc8cedd73972         6800 Packages
- b2df284d6e156e27dde07c4627c52a8b415c5d82         3019 Packages.bz2
- 058ed8c9121bd1d4d58e1cc0c0049328debd0213         2736 Packages.xz
- dfbc8b689a372d24e2384cad0a977ea5fe624732         2923 Packages.gz
+ 008f8149a2d2b2334561c9383c37025343367ab0         7805 Packages
+ 5ae73748f2ea7e83577dbe47e399be5c1e02db8d         3228 Packages.bz2
+ cbdeb0cc04f52a6aacc3649bdb425440564fe55d         2832 Packages.xz
+ 36f086ac230d31336f14be9f582b49b06117df3e         3036 Packages.gz
 SHA256:
- ae650bebf7f870183dde4437a7882e65bb27bfd6d58fab341d60d3f91cf8260f         6800 Packages
- 440624d9adfe9150dc08e4b8f889f956bacbbacbd82f5d9f0c62961df82a8936         3019 Packages.bz2
- 70c29d70a0b761c0a1740ac4d46e5a81997b697a9807efb0ac8e4c1ccbc6ea90         2736 Packages.xz
- ca209dc3403a2333cb9ea6793f5a2df4cdb08dd055d799a6d3849b105f20dcf9         2923 Packages.gz
+ f07f904ecfd15bc34af9cb181273f4a536c7960a1ec71b3a4b5bd895b83da167         7805 Packages
+ 23809c6f3bdfe0f26e633c0a208478dfcc768f34bd59b654630a8032c6a4acb7         3228 Packages.bz2
+ 56d601c59a49c45d2b63a768dfa78203fbeba44de4534367307c51d559d18d3d         2832 Packages.xz
+ 6dcd1c6d305c260f5cb459daed325e4157e2e270c136723cc8bcc00b5d5d770b         3036 Packages.gz
