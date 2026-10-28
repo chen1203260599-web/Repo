@@ -1,8 +1,0 @@
-﻿git : To https://github.com/chen1203260599-web/Repo.git
-所在位置 行:1 字符: 428
-+ ... .\pl2.txt" | Select-Object -Last 2; git push origin main 2>&1 | Out-F ...
-+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (To https://gith...99-web/Repo.git:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-   832015f..0c08346  main -> main

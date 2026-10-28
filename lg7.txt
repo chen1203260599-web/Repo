@@ -1,3 +1,0 @@
-﻿c3445cf chore: exclude Theos build artifacts from repo; publish step now adds only debs+index
-1283b38 publish ElinkBridge com.elinkbridge.ios_1.0.0-1+debug_iphoneos-arm64.deb
-0b1cb58 fix: extern C for ELBLog/ELBLogEnabled (Tweak.xm compiles as ObjC++, .m as ObjC)
