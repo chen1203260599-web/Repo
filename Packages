@@ -93,10 +93,10 @@ Architecture: iphoneos-arm64
 Version: 1.0.0-2+debug
 Installed-Size: 304
 Filename: debs/com.elinkbridge.ios_1.0.0-2+debug_iphoneos-arm64.deb
-Size: 43234
-MD5sum: 53bbe0ec7952b80bd8b00cdba3bd0e9d
-SHA1: 7410c373f45db6fb6217c2d8c0c3c697128228a0
-SHA256: e999befd56c56a43943380796fd3b66ac56514a8551d8a74e50a8ff52cbbce3b
+Size: 43206
+MD5sum: 3d83799893eff571270abb89f2d06cd9
+SHA1: 78a43ebaece6d19df001c9f8a9a0681ce5c89ab2
+SHA256: de424fefce4292aeabf3d09f96306271b64dd5eb326b89d2bb1ff109bbc9efaf
 
 Package: com.userspace.carsplit
 Name: CarSplit
