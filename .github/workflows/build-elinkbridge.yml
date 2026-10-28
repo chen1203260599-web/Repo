@@ -22,7 +22,11 @@ jobs:
       - name: Install cross-compile deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y clang ldid dpkg-dev zstd xz-utils bzip2 file
+          sudo apt-get install -y clang dpkg-dev zstd xz-utils bzip2 file
+          # ldid 不在 Ubuntu 官方源，从 Procursus 官方 release 下载 Linux 静态二进制
+          curl -sL -o /usr/local/bin/ldid https://github.com/ProcursusTeam/ldid/releases/latest/download/ldid_linux_x86_64
+          chmod +x /usr/local/bin/ldid
+          ldid 2>&1 | head -1 || true
 
       - name: Install Theos + iOS SDK
         run: |

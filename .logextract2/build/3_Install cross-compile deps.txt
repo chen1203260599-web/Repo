@@ -1,0 +1,34 @@
+﻿2026-10-28T16:10:51.8101343Z ##[group]Run sudo apt-get update
+2026-10-28T16:10:51.8103065Z [36;1msudo apt-get update[0m
+2026-10-28T16:10:51.8104860Z [36;1msudo apt-get install -y clang ldid dpkg-dev zstd xz-utils bzip2 file[0m
+2026-10-28T16:10:51.8360812Z shell: /usr/bin/bash -e {0}
+2026-10-28T16:10:51.8362790Z ##[endgroup]
+2026-10-28T16:10:51.9125196Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-28T16:10:51.9398305Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-28T16:10:51.9414417Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-28T16:10:51.9455102Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-28T16:10:51.9462013Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-28T16:10:51.9477915Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-28T16:10:52.0800414Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1406 kB]
+2026-10-28T16:10:52.0960327Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [310 kB]
+2026-10-28T16:10:52.0995426Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1707 kB]
+2026-10-28T16:10:52.1080087Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [343 kB]
+2026-10-28T16:10:52.1104410Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1809 kB]
+2026-10-28T16:10:52.1198165Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+2026-10-28T16:10:52.1234575Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+2026-10-28T16:10:52.1389019Z Get:14 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [602 kB]
+2026-10-28T16:10:52.1501329Z Get:15 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+2026-10-28T16:10:52.1561566Z Get:16 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [666 kB]
+2026-10-28T16:10:52.2423418Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1146 kB]
+2026-10-28T16:10:52.2477977Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+2026-10-28T16:10:52.2499440Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1223 kB]
+2026-10-28T16:10:52.2971532Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+2026-10-28T16:10:52.2995697Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+2026-10-28T16:10:52.3068956Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+2026-10-28T16:10:55.3044428Z Fetched 12.6 MB in 1s (10.1 MB/s)
+2026-10-28T16:10:56.2545894Z Reading package lists...
+2026-10-28T16:10:56.2853572Z Reading package lists...
+2026-10-28T16:10:56.4829906Z Building dependency tree...
+2026-10-28T16:10:56.4837711Z Reading state information...
+2026-10-28T16:10:56.4994147Z E: Unable to locate package ldid
+2026-10-28T16:10:56.5027386Z ##[error]Process completed with exit code 100.
