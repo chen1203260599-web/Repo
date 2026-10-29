@@ -75,12 +75,12 @@ Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), firmware (>= 14.0)
 Architecture: iphoneos-arm64
 Version: 1.0.0-1+debug
-Installed-Size: 304
+Installed-Size: 160
 Filename: debs/com.elinkbridge.ios_1.0.0-1+debug_iphoneos-arm64.deb
-Size: 43202
-MD5sum: e0a045b1a50950e8de32e056f83ea6bd
-SHA1: 2e46e5bd300f2cb575cabf6f9f767cde45d6db6d
-SHA256: a1b4b79150a116c3f71cd25adcc2e0ef368d02de0a619b334eb55f3318f16e14
+Size: 26662
+MD5sum: 7bd8afc2fed56d613e231e3dfd73dce8
+SHA1: 61b804cec83a7afd62eb1569578941bdd547770b
+SHA256: 6779ea63a611e16e046d683e1ac5a6f2269ce362cd646a3a63d97345272de613
 
 Package: com.userspace.carsplit
 Name: CarSplit
