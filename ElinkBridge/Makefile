@@ -1,5 +1,8 @@
 TARGET := iphone:clang:latest:14.5
-ARCHS := arm64 arm64e
+# 只出 arm64：arm64e slice 由 Linux 交叉工具链（LLVM-11）编译的 ABI 与 Apple PAC 不兼容，
+# 在 arm64e 设备（A12+，如 iPhone 14 Pro）上 dyld 优先加载该 slice 会直接 crash 进安全模式。
+# arm64e 进程可兼容加载纯 arm64 dylib（社区标准做法），故去掉 arm64e。
+ARCHS := arm64
 THEOS_PACKAGE_SCHEME := rootless
 
 include $(THEOS)/makefiles/common.mk
